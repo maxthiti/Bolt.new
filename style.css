@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #dfe6ec);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.timeline {
+  max-width: 1490px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  gap: 40px;
+}
+
+.timeline-item.left .text {
+  order: 1;
+}
+.timeline-item.left .image {
+  order: 2;
+}
+
+.timeline-item.right .image {
+  order: 1;
+}
+.timeline-item.right .text {
+  order: 2;
+}
+
+.timeline-item .text {
+  flex: 1;
+  min-width: 280px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.timeline-item .text h2 {
+  color: #0056b3;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timeline-item .text .date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.timeline-item .image {
+  flex: 1;
+  min-width: 280px;
+}
+.timeline-item .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.carousel {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  margin-top: 20px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+}
+
+.carousel-images img {
+  height: auto;
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px 14px;
+  z-index: 5;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.carousel-btn.prev {
+  left: 15px;
+}
+.carousel-btn.next {
+  right: 15px;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.carousel-dots .dot.active {
+  background: #2196f3;
+  transform: scale(1.3);
+}
+
+
